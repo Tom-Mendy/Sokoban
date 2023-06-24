@@ -42,17 +42,27 @@ static int return_fonc(int result)
     return 0;
 }
 
+int initialize_struct_data(storage_t *storage, int storage_int_tab[3],
+char ***map, char const * const map_filename)
+{
+    if (catch_map(map, storage_int_tab, map_filename, &storage_int_tab[2])
+    == 84)
+        return 84;
+    storage->hole = malloc(sizeof(position_t) * storage_int_tab[2]);
+    storage->box = malloc(sizeof(position_t) * storage_int_tab[2]);
+    get_positions(map, storage_int_tab, storage);
+    return 0;
+}
+
 int sokoban(char const * const map_filename)
 {
     char **map = NULL;
     int storage_int_tab[3] = { 0 };
     storage_t storage;
-    if (catch_map(&map, storage_int_tab, map_filename, &storage_int_tab[2]) == 84)
-        return 84;
-    storage.hole = malloc(sizeof(position_t) * storage_int_tab[2]);
-    storage.box = malloc(sizeof(position_t) * storage_int_tab[2]);
-    get_positions(&map, storage_int_tab, &storage);
     WINDOW *mainwin;
+    if (initialize_struct_data(&storage, storage_int_tab, &map, map_filename)
+    == 84)
+        return 84;
     if (init_ncurses(&mainwin) == 84)
         return 84;
     display_map(map, &storage, (&mainwin), storage_int_tab);
