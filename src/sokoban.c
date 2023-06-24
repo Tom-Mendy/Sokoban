@@ -57,7 +57,7 @@ char ***map, char const * const map_filename)
 int sokoban(char const * const map_filename)
 {
     char **map = NULL;
-    int storage_int_tab[3] = { 0 };
+    int storage_int_tab[3] = {0};
     storage_t storage;
     WINDOW *mainwin;
     if (initialize_struct_data(&storage, storage_int_tab, &map, map_filename)
