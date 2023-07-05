@@ -47,6 +47,10 @@ cd Sokoban
 make
 ```
 
+### Docker
+
+check : hub.docker.com/r/tommendy/sokoban
+
 ## Overview
 
 ***
