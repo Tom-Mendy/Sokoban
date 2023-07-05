@@ -6,7 +6,6 @@
 ##
 
 SRC			=	my_count_nb_char_in_str.c					\
-				my_get_nbr.c								\
 				my_is_alpha.c								\
 				my_is_lower.c								\
 				my_is_num.c									\
@@ -65,11 +64,8 @@ TEST		=	test_my_put_char.c							\
 				test_my_str_up_case.c						\
 				test_spliter.c								\
 				test_my_load_file_in_memory.c				\
-				test_my_get_nbr.c							\
 
 DIR_TESTS	=	$(addprefix tests/, $(TEST))
-
-EXT			=	../my_int/src/my_compute_power_rec.c\
 
 OBJ_EXT		=	$(EXT:.c=.o)
 

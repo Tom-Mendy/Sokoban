@@ -15,12 +15,8 @@
     #include <sys/syscall.h>
     #include <fcntl.h>
     #include <stdbool.h>
-    #include "../lib/my_int/include/my_int.h"
     #include "../lib/my_str/include/my_str.h"
     #include "../lib/my_str/include/spliter.h"
-    #include "../lib/my_linked_list/include/my_linked_list.h"
-    #include "../lib/my_char_map/include/my_char_map.h"
-    #include "../lib/my_int_map/include/my_int_map.h"
     typedef struct position{
         int x;
         int y;
