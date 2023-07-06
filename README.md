@@ -49,7 +49,7 @@ make
 
 ### Docker
 
-check : hub.docker.com/r/tommendy/sokoban
+check : [hub.docker.com/r/tommendy/sokoban](hub.docker.com/r/tommendy/sokoban)
 
 ## Overview
 
