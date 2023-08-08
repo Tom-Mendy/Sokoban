@@ -71,5 +71,5 @@ KEYMAP
 You can launch the exemple map like that:
 
 ```c
-./my_sokoban map/mpa.exemple
+./my_sokoban map/map.exemple
 ```
